@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Diyali - AI/ML Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Daniel Diyali</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Daniel</span><br>
+                    <span class="typing-text">AI/ML Engineer</span>
+                </h1>
+                <p class="hero-subtitle">Passionate about leveraging AI to automate workflows and drive innovation in service delivery</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="ai-animation">
+                    <div class="neural-network">
+                        <div class="node node-1"></div>
+                        <div class="node node-2"></div>
+                        <div class="node node-3"></div>
+                        <div class="node node-4"></div>
+                        <div class="connection conn-1"></div>
+                        <div class="connection conn-2"></div>
+                        <div class="connection conn-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Computer Science student at Washington State University with a passion for AI/ML and automation. Experienced in Python, generative AI, and building intelligent solutions that streamline workflows and improve efficiency.</p>
+                    <p>Currently seeking opportunities to apply my skills in real-world projects, particularly in service delivery automation and AI-powered solutions like those at Ericsson.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number" data-target="15">0</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="8">0</span>
+                            <span class="stat-label">AI Models</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-target="3">0</span>
+                            <span class="stat-label">Years Learning</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-img">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>Daniel Diyali</h3>
+                        <p>AI/ML Enthusiast</p>
+                        <p>WSU Computer Science</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="ai automation">
+                    <div class="project-image">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI Workflow Automation Agent</h3>
+                        <p>Built an intelligent automation system using Python and ML to streamline repetitive service delivery tasks, reducing processing time by 70% and improving accuracy.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>API Integration</span>
+                            <span>Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Generative AI Report Summarizer</h3>
+                        <p>Developed a tool that automatically summarizes lengthy service delivery reports using GPT models, improving team productivity and decision-making speed.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenAI API</span>
+                            <span>NLP</span>
+                            <span>Streamlit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web automation">
+                    <div class="project-image">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Service Delivery Dashboard</h3>
+                        <p>Created an interactive real-time dashboard for monitoring service delivery metrics with automated alerts and predictive analytics capabilities.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>Python</span>
+                            <span>D3.js</span>
+                            <span>Flask</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-image">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Chatbot</h3>
+                        <p>Built an intelligent customer service chatbot using natural language processing to handle common queries and escalate complex issues automatically.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>NLTK</span>
+                            <span>FastAPI</span>
+                            <span>Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="automation">
+                    <div class="project-image">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Process Automation Suite</h3>
+                        <p>Developed a comprehensive automation suite that handles data processing, report generation, and workflow management for enterprise environments.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>Selenium</span>
+                            <span>Pandas</span>
+                            <span>AWS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Responsive Web Applications</h3>
+                        <p>Created multiple responsive web applications with modern UI/UX design principles, focusing on performance and user experience optimization.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> AI/ML & Data Science</h3>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span class="skill-name">TensorFlow/Keras</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Generative AI</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">NLP</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="82%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-bar">
+                            <span class="skill-name">Data Analysis</span>
+                            <div class="skill-progress">
+                                <div class="skill-fill" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Automation</span>
+                        <span class="skill-tag">Glean Platform</span>
+                        <span class="skill-tag">Workflow Tools</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>daniel.diyali@wsu.edu</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <span>linkedin.com/in/daniel-diyali</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <span>github.com/danieldiyali</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Seattle, WA</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Daniel Diyali. Built with passion for AI and automation. Ready to innovate at Ericsson!</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
