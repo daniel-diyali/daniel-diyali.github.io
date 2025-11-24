@@ -190,11 +190,12 @@ contactForm.addEventListener('submit', function(e) {
     const formData = new FormData(this);
     const name = formData.get('name');
     const email = formData.get('email');
+    const subject = formData.get('subject');
     const message = formData.get('message');
     
     // Simple validation
     if (!name || !email || !message) {
-        showNotification('Please fill in all fields.', 'error');
+        showNotification('Please fill in all required fields.', 'error');
         return;
     }
     
