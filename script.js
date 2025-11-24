@@ -180,6 +180,11 @@ filterButtons.forEach(button => {
     });
 });
 
+// Initialize EmailJS
+(function() {
+    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+})();
+
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 
@@ -190,7 +195,7 @@ contactForm.addEventListener('submit', function(e) {
     const formData = new FormData(this);
     const name = formData.get('name');
     const email = formData.get('email');
-    const subject = formData.get('subject');
+    const subject = formData.get('subject') || 'New message from portfolio';
     const message = formData.get('message');
     
     // Simple validation
@@ -204,18 +209,31 @@ contactForm.addEventListener('submit', function(e) {
         return;
     }
     
-    // Simulate form submission
+    // Send email using EmailJS
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
     
-    setTimeout(() => {
-        showNotification('Thank you for your message! I\'ll get back to you soon.', 'success');
+    // EmailJS send function
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+        from_name: name,
+        from_email: email,
+        subject: subject,
+        message: message,
+        to_email: 'diyalidaniel@gmail.com'
+    })
+    .then(() => {
+        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
         this.reset();
+    })
+    .catch(() => {
+        showNotification('Failed to send message. Please try again or email me directly.', 'error');
+    })
+    .finally(() => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    });
 });
 
 // Email validation helper
