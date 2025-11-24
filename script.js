@@ -48,7 +48,7 @@ let isDeleting = false;
 
 function typeRole() {
     const currentRole = roles[roleIndex];
-    
+
     if (isDeleting) {
         typingText.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
@@ -56,9 +56,9 @@ function typeRole() {
         typingText.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
     }
-    
+
     let typeSpeed = isDeleting ? 50 : 100;
-    
+
     if (!isDeleting && charIndex === currentRole.length) {
         typeSpeed = 2000;
         isDeleting = true;
@@ -67,7 +67,7 @@ function typeRole() {
         roleIndex = (roleIndex + 1) % roles.length;
         typeSpeed = 500;
     }
-    
+
     setTimeout(typeRole, typeSpeed);
 }
 
@@ -107,7 +107,7 @@ const observer = new IntersectionObserver((entries) => {
                     animateCounter(stat, target);
                 });
             }
-            
+
             // Animate skill bars
             if (entry.target.classList.contains('skill-fill')) {
                 const width = entry.target.getAttribute('data-width');
@@ -115,7 +115,7 @@ const observer = new IntersectionObserver((entries) => {
                     entry.target.style.width = width;
                 }, 200);
             }
-            
+
             // Add fade-in animation to project cards
             if (entry.target.classList.contains('project-card')) {
                 entry.target.style.opacity = '1';
@@ -130,12 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Observe stats
     const stats = document.querySelector('.stats');
     if (stats) observer.observe(stats);
-    
+
     // Observe skill bars
     document.querySelectorAll('.skill-fill').forEach(skill => {
         observer.observe(skill);
     });
-    
+
     // Observe project cards
     document.querySelectorAll('.project-card').forEach(card => {
         card.style.opacity = '0';
@@ -155,12 +155,12 @@ filterButtons.forEach(button => {
         filterButtons.forEach(btn => btn.classList.remove('active'));
         // Add active class to clicked button
         button.classList.add('active');
-        
+
         const filterValue = button.getAttribute('data-filter');
-        
+
         projectCards.forEach(card => {
             const cardCategory = card.getAttribute('data-category');
-            
+
             if (filterValue === 'all' || cardCategory.includes(filterValue)) {
                 card.classList.remove('hidden');
                 card.style.display = 'block';
@@ -181,59 +181,59 @@ filterButtons.forEach(button => {
 });
 
 // Initialize EmailJS
-(function() {
-    emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your EmailJS public key
+(function () {
+    emailjs.init('YcsNAXlltJSp7p2ma'); // Replace with your EmailJS public key
 })();
 
 // Contact Form Handling
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', function(e) {
+contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
+
     // Get form data
     const formData = new FormData(this);
     const name = formData.get('name');
     const email = formData.get('email');
     const subject = formData.get('subject') || 'New message from portfolio';
     const message = formData.get('message');
-    
+
     // Simple validation
     if (!name || !email || !message) {
         showNotification('Please fill in all required fields.', 'error');
         return;
     }
-    
+
     if (!isValidEmail(email)) {
         showNotification('Please enter a valid email address.', 'error');
         return;
     }
-    
+
     // Send email using EmailJS
     const submitBtn = this.querySelector('button[type="submit"]');
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
-    
+
     // EmailJS send function
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    emailjs.send('service_q1n162d', 'template_mn15ii5', {
         from_name: name,
         from_email: email,
         subject: subject,
         message: message,
         to_email: 'diyalidaniel@gmail.com'
     })
-    .then(() => {
-        showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-        this.reset();
-    })
-    .catch(() => {
-        showNotification('Failed to send message. Please try again or email me directly.', 'error');
-    })
-    .finally(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    });
+        .then(() => {
+            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+            this.reset();
+        })
+        .catch(() => {
+            showNotification('Failed to send message. Please try again or email me directly.', 'error');
+        })
+        .finally(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
 });
 
 // Email validation helper
@@ -249,12 +249,12 @@ function showNotification(message, type = 'info') {
     if (existingNotification) {
         existingNotification.remove();
     }
-    
+
     // Create notification element
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Add styles
     Object.assign(notification.style, {
         position: 'fixed',
@@ -269,7 +269,7 @@ function showNotification(message, type = 'info') {
         transition: 'transform 0.3s ease',
         maxWidth: '300px'
     });
-    
+
     // Set background color based on type
     const colors = {
         success: '#10b981',
@@ -277,15 +277,15 @@ function showNotification(message, type = 'info') {
         info: '#3b82f6'
     };
     notification.style.background = colors[type] || colors.info;
-    
+
     // Add to page
     document.body.appendChild(notification);
-    
+
     // Animate in
     setTimeout(() => {
         notification.style.transform = 'translateX(0)';
     }, 100);
-    
+
     // Remove after 5 seconds
     setTimeout(() => {
         notification.style.transform = 'translateX(100%)';
@@ -301,7 +301,7 @@ function showNotification(message, type = 'info') {
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.ai-animation');
-    
+
     parallaxElements.forEach(element => {
         const speed = 0.5;
         element.style.transform = `translateY(${scrolled * speed}px)`;
@@ -311,39 +311,39 @@ window.addEventListener('scroll', () => {
 // Add loading animation
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
-    
+
     // Animate hero elements
     const heroTitle = document.querySelector('.hero-title');
     const heroSubtitle = document.querySelector('.hero-subtitle');
     const heroButtons = document.querySelector('.hero-buttons');
-    
+
     if (heroTitle) {
         heroTitle.style.opacity = '0';
         heroTitle.style.transform = 'translateY(30px)';
         heroTitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        
+
         setTimeout(() => {
             heroTitle.style.opacity = '1';
             heroTitle.style.transform = 'translateY(0)';
         }, 300);
     }
-    
+
     if (heroSubtitle) {
         heroSubtitle.style.opacity = '0';
         heroSubtitle.style.transform = 'translateY(30px)';
         heroSubtitle.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        
+
         setTimeout(() => {
             heroSubtitle.style.opacity = '1';
             heroSubtitle.style.transform = 'translateY(0)';
         }, 500);
     }
-    
+
     if (heroButtons) {
         heroButtons.style.opacity = '0';
         heroButtons.style.transform = 'translateY(30px)';
         heroButtons.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        
+
         setTimeout(() => {
             heroButtons.style.opacity = '1';
             heroButtons.style.transform = 'translateY(0)';
