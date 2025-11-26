@@ -720,6 +720,45 @@ section {
     font-weight: 500;
 }
 
+.professional-summary {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 2rem;
+}
+
+.professional-summary p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.resume-viewer-section {
+    margin: 4rem 0;
+}
+
+.resume-viewer-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.pdf-viewer {
+    background: white;
+    border-radius: 15px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.pdf-viewer iframe {
+    border: none;
+    border-radius: 15px;
+}
+
 .resume-content {
     display: grid;
     grid-template-columns: 2fr 1fr;
